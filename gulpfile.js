@@ -28,7 +28,9 @@ function style() {
 return gulp
     .src([paths.styles.src, paths.styles.dontProcess])
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass({
+        includePaths: require('node-normalize-scss').includePaths
+      }))
     .on("error", sass.logError)
     .pipe(concat("index.css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
