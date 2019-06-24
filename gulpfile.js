@@ -11,7 +11,6 @@ var gulp = require("gulp"),
 var paths = {
     styles: {
     src: "./src/scss/**/*.scss",
-    dontProcess: "!./src/scss/variables.scss"
     },
     htmlFiles: {
     srcHTML: "./src/**/*.html",
@@ -26,7 +25,7 @@ var paths = {
 
 function style() {
 return gulp
-    .src([paths.styles.src, paths.styles.dontProcess])
+    .src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sass({
         includePaths: require('node-normalize-scss').includePaths

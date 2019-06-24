@@ -1,0 +1,62 @@
+.first-screen{
+    &__wrapper{
+    padding: 165px 0 0 0;
+    position: relative;
+    height: 820px;
+    background-image: url(../images/first-screen/first-screen-bg.png);
+    }
+    &__inner{
+        background-image: url(../images/first-screen/first-screen-img.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        height: 495px;
+        @media (max-width: 650px){
+            height: auto;
+        }
+    }
+    &__content{
+        max-width: 620px;
+        padding: 100px 0 0 100px;
+        @media (max-width: 650px){
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+    &__textbox{
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 25px 25px 25px 25px;
+        @media (min-width: 650px){
+            border-radius: 0 200px 0 0;
+        }
+    }
+    &__text{
+        font-weight: 300;
+        letter-spacing: -1px;
+        line-height: 30px;
+        padding: 40px 0 35px;
+    }
+}
+.menu.menu_vertical{
+    position: absolute;
+    width: 335px;
+    height: 25px;
+    transform-origin:left top;
+    transform: rotate(-90deg);
+    top: 575px;
+    background-color: rgba(255, 255, 255, 0.5);
+    @media (max-width: 650px){
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        height: 25px;
+        top:0;
+        transform: rotate(0deg);
+        text-align: center;
+    }
+    .menu__inner{
+        @media (max-width: 650px){
+            display: inline-block;
+        }
+    }
+}

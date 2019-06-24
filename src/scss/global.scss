@@ -1,9 +1,25 @@
 @import "normalize";
+@import "./variables.scss";
+@import "./mixins.scss";
 *{
     box-sizing: border-box;
 }
 body{
     font-family: Montserrat, Helvetica, sans-serif;
+}
+.text{
+    font-size:$text-size;
+    color:$txt-dark-color;
+    margin: 0;
+}
+.heading{
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: 0;
+    color:$txt-dark-color;
+}
+.heading_size_l{
+    font-size: $heading-size-l;
 }
 .main-wrapper {
     position: relative;
