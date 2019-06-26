@@ -1,0 +1,22 @@
+.first-screen{
+    &__inner{
+        padding: 70px 0 0 0;
+        display: flex;
+    }
+    &__center-content{
+        display: flex;
+        align-items: center;
+        max-width: 540px;
+        z-index: 1;
+    }
+    &__right-content{
+        position: absolute;
+        right:0;
+    }
+    &__text{
+        padding: 22px 0 28px 0;
+        line-height: 30px;
+        letter-spacing: -1px;
+        font-weight: 300;
+    }
+}
