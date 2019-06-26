@@ -1,0 +1,6 @@
+@mixin button-outlined {
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.5);
+    color: $txt-dark-color;
+}
