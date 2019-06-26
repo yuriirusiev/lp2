@@ -7,25 +7,16 @@
 body{
     font-family: Montserrat, Helvetica, sans-serif;
 }
-.text{
-    font-size:$text-size;
-    color:$txt-dark-color;
-    margin: 0;
-}
-.heading{
-    font-weight: bold;
-    letter-spacing: -1px;
-    margin: 0;
-    color:$txt-dark-color;
-}
-.heading_size_l{
-    font-size: $heading-size-l;
-}
 .main-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    .main-bg{
+        position: absolute;
+        width: 100%;
+        background: url(../images/main-bg.png) right top no-repeat;
+    }
 }
 .content {
     flex: 1 0 auto;
@@ -33,6 +24,22 @@ body{
 }
 .footer {
     flex: 0 0 auto;
+}
+.heading{
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: 0;
+    color:$txt-dark-color;
+    &_size_l{
+        font-size: $heading-size-l;
+    }
+}
+.text{
+    font-size:$text-size;
+    margin: 0;
+}
+.text_dark{
+    color:$txt-dark-color;
 }
 .container{
     width: 1140px;
