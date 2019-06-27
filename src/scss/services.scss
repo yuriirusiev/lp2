@@ -13,9 +13,10 @@
         justify-content: space-between;
     }
     &__col {
+        max-width: 366px;
         border-radius: 4px;
         border: 1px solid #E8E9ED;
-        margin: 0;
+        
         padding: 0 0 70px 0;
         &:hover .button--outlined {
             text-align: center;
@@ -24,18 +25,18 @@
             box-shadow: none;
         }
     }
-    &__col-imgbox {
-        border-radius: 4px 4px 0 0;
-    }
     &__col-textbox {
         text-align: center;
+        padding: 0 20px;
     }
     &__col-heading {
         font-size: 20px;
         padding: 40px 0 16px 0;
     }
     &__col-text {
+        font-size: 12px;
         line-height: 26px;
+        font-weight: 300;
         padding: 0 0 22px 0;
         letter-spacing: -1px;
     }
