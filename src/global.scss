@@ -11,11 +11,6 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    .main-bg{
-        position: absolute;
-        width: 100%;
-        background: url(../images/main-bg.png) right top no-repeat;
-    }
 }
 .content {
     flex: 1 0 auto;

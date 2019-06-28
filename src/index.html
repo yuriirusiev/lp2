@@ -10,152 +10,17 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="main-wrapper" id="top">
-            <div class="main-bg">
+        <div class="main-outer">
+            <div class="main-wrapper">
                 <div class="page-top-wrapper">
-                    <header class="header" >
-                        <div class="header__wrapper">  
-                            <div class="container">
-                                <div class="header__inner">
-                                    <div class="header__left-content">
-                                        <nav class="menu">
-                                            <ul class="menu__list">
-                                                <li class="menu__item">
-                                                    <a href="" class="menu__link text text--dark">Home</a>
-                                                </li>
-                                                <li class="menu__item">
-                                                    <a href="" class="menu__link text text--dark">Company</a>
-                                                </li>
-                                                <li class="menu__item">
-                                                    <a href="" class="menu__link text text--dark">About</a>
-                                                </li>
-                                                <li class="menu__item">
-                                                    <a href="" class="menu__link text text--dark">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="header__right-content">
-                                        <div class="header__phone">
-                                            <p class="header__phone-text text text--dark">+&nbsp;515&nbsp;243&nbsp;3273</p>
-                                        </div>
-                                        <a href="" class="button button--solid">button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+                    @@include("./components/header/index.html")
                 </div>
                 <main class="content">
-                    <section class="home">
-                        <div class="first-screen">
-                            <div class="first-screen__wrapper">
-                                <div class="container">
-                                    <div class="first-screen__inner">
-                                        <div class="first-screen__left-content">
-                                            <div class="menu menu--vertical">
-                                                <div class="menu__inner menu--verical__inner">
-                                                    <ul class="menu__list">
-                                                        <li class="menu__item">
-                                                            <a href="" class="menu__link text text--dark">Facebook</a>
-                                                        </li>
-                                                        <li class="menu__item">
-                                                            <a href="" class="menu__link text text--dark">Twitter</a>
-                                                        </li>
-                                                        <li class="menu__item">
-                                                            <a href="" class="menu__link text text--dark">Dribbble</a>
-                                                        </li>
-                                                        <li class="menu__item">
-                                                            <a href="" class="menu__link text text--dark">Instagram</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="first-screen__textbox">
-                                                <div class="first-screen__textbox-wrapper">
-                                                    <div class="first-screen__textbox">
-                                                        <h1 class="heading heading--size--l heading--dark">
-                                                            Professional cleaning<br />service
-                                                        </h1>
-                                                        <p class="first-screen__text text text--dark">
-                                                            Corporate social responsibility policymaker inclusion, resist; compassion mass incarceration correlation white paper
-                                                        </p>
-                                                        <a class="arrow-link" href="" alt="Joing us!">
-                                                            <img class="img" src="./images/arrow-blue.png" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="first-screen__right-content">
-                                            <div class="first-screen__img-wrapper">
-                                                <img src="./images/first-screen-img.png" alt="We are proffecionals">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <section class="first-screen__outer">
+                        @@include("./components/first-screen/index.html")
                     </section>
-                    <section class="company" id="#company">
-                        <div class="reasons">
-                            <div class="reasons__wrapper">
-                                <div class="container">
-                                    <div class="reasons__inner">
-                                        <div class="reasons__textbox">
-                                            <h2 class="heading heading--size--l heading--dark">
-                                                Reasons to Choose Us
-                                            </h2>
-                                            <p class="reasons__text text text--dark">
-                                                Behind our commitment to excellence are few key attributes that define who we are and what makes us different<br /> from any other.
-                                            </p>
-                                        </div>
-                                        <div class="grid reasons__grid">
-                                            <div class="reasons__grid-box1 reasons__grid-box grid__box1">
-                                                <div class="reasons__grid-textbox">
-                                                    <h3 class="heading heading--size heading--light heading--uppercase">
-                                                        - Residential Cleaning
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="reasons__grid-box2 reasons__grid-box grid__box2">
-                                                <div class="reasons__grid-textbox">
-                                                    <h3 class="heading heading--size heading--light">
-                                                        - Residential Cleaning
-                                                    </h3>
-                                                    <p class="reasons__grid-text text text--light">
-                                                        What is portfolio template in the page attributes Default and full width templates are self-explanatory
-                                                    </p>
-                                                    <a class="reasons__arrow-link" href="">
-                                                        <img class="img" src="./images/arrow-outlined.png" alt="Join us!" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="reasons__grid-box3 reasons__grid-box grid__box3">
-                                                <div class="reasons__grid-textbox">
-                                                    <h3 class="heading heading--size heading--light">
-                                                        - Residential Cleaning
-                                                    </h3>
-                                                    <p class="reasons__grid-text text text--light">
-                                                        What is portfolio template in the page attributes Default and full width templates are self-explanatory
-                                                    </p>
-                                                    <a class="reasons__arrow-link" href="">
-                                                        <img class="img" src="./images/arrow-outlined.png" alt="Join us!" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="reasons__grid-box4 reasons__grid-box grid__box4">
-                                                <div class="reasons__grid-textbox">
-                                                    <h3 class="heading heading--size heading--light heading--uppercase">
-                                                        - Residential Cleaning
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <section class="advantages__outer">
+                        @@include("./components/advantages/index.html")                        
                     </section>
                     <section class="about" id="#about">
                         <div class="services">
@@ -353,7 +218,7 @@
                                             <button class="contact__button" type="submit">
                                                 <img class="contact__button-img" src="./images/arrow-blue.png">
                                             </button>
-                                       </div>
+                                        </div>
                                     </form>
                                     <div class="contact__menu">
                                         <nav class="menu">
