@@ -1,0 +1,50 @@
+@import "../variables.scss";
+
+.services__inner {
+    padding: 0 0 90px 0;
+}
+
+.services__text {
+    line-height: 30px;
+    letter-spacing: -1px;
+    padding: 30px 0;
+}
+
+.services__3-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services__col {
+    max-width: 366px;
+    border-radius: 4px;
+    border: 1px solid #E8E9ED;
+    padding: 0 0 70px 0;
+
+    &:hover 
+        .button--outlined {
+            text-align: center;
+            color:#ffffff;
+            background-color: $btn-solid-color;
+            box-shadow: none;
+            }
+
+}
+
+.services__col-textbox {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.services__col-heading {
+    font-size: 20px;
+    padding: 40px 0 16px 0;
+}
+
+.services__col-text {
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: 300;
+    padding: 0 0 22px 0;
+    letter-spacing: -1px;
+}

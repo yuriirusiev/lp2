@@ -6,26 +6,12 @@ var gulp = require("gulp"),
     sourcemaps = require("gulp-sourcemaps"),
     concat = require("gulp-concat"),
     imagemin = require("gulp-imagemin"),
+    fileinclude = require('gulp-file-include'),
     browserSync = require("browser-sync").create();
-
-var paths = {
-    styles: {
-    src: "./src/scss/**/*.scss",
-    },
-    htmlFiles: {
-    srcHTML: "./src/**/*.html",
-    destHTML: "./public/*.html"
-    },
-    dest: "./public",
-    images: {
-        srcImg: "./src/images/**/*",
-        destImg: "./public/images/"
-        },
-};
 
 function style() {
 return gulp
-    .src(paths.styles.src)
+    .src("./src/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({
         includePaths: require('node-normalize-scss').includePaths
@@ -34,20 +20,24 @@ return gulp
     .pipe(concat("index.css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.dest))
+    .pipe(gulp.dest("./public"))
     .pipe(browserSync.stream());
 }
 
-function optimizeImg() {
-    return gulp.src(paths.images.srcImg)
-        .pipe(imagemin())
-        .pipe(gulp.dest(paths.images.destImg));
-}
+function htmlInclude() {
+    return gulp.src("./src/index.html")
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./public/'))
+      .pipe(browserSync.stream());
+  }
 
-function htmlCopy() {
-    return gulp
-    .src(paths.htmlFiles.srcHTML)
-    .pipe(gulp.dest(paths.dest));
+function optimizeImg() {
+    return gulp.src("./src/images/**/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("./public/images/"));
 }
 
 function reload(done) {
@@ -58,16 +48,16 @@ done();
 function watch() {
 browserSync.init({
     server: {
-        baseDir: paths.dest
+        baseDir: "./public"
     }
 });
-gulp.watch(paths.styles.src, style);
-gulp.watch(paths.htmlFiles.srcHTML, htmlCopy);
-gulp.watch(paths.images.srcImg, optimizeImg);
-gulp.watch(paths.htmlFiles.destHTML, reload);
+gulp.watch("./src/**/*.scss", style);
+gulp.watch("./src/**/*.html", htmlInclude);
+gulp.watch("./src/images/**/*", optimizeImg);
+gulp.watch("./public/*.html", reload);
 }
 exports.watch = watch
 
-var build = gulp.parallel(watch, style, htmlCopy, optimizeImg);
+var build = gulp.parallel(watch, style, htmlInclude, optimizeImg);
 
 gulp.task('default', build);
