@@ -4,19 +4,19 @@
     padding: 0 0 90px 0;
 }
 
-.services__text {
+.services__textbox-main__text {
     line-height: 30px;
     letter-spacing: -1px;
     padding: 30px 0;
 }
 
-.services__3-column {
+.services__columnbox {
     display: flex;
     justify-content: space-between;
 }
 
-.services__col {
-    max-width: 366px;
+.services__columnbox__column {
+    max-width: 368px;
     border-radius: 4px;
     border: 1px solid #E8E9ED;
     padding: 0 0 70px 0;
@@ -31,20 +31,29 @@
 
 }
 
-.services__col-textbox {
+.services__columnbox__column__img {
+    border-radius: 4px 4px 0 0;
+}
+
+.services__columnbox__column__textbox {
     text-align: center;
     padding: 0 20px;
 }
 
-.services__col-heading {
+.services__columnbox__column__textbox-heading {
     font-size: 20px;
     padding: 40px 0 16px 0;
 }
 
-.services__col-text {
+.services__columnbox__column__textbox-p {
     font-size: 12px;
     line-height: 26px;
     font-weight: 300;
     padding: 0 0 22px 0;
     letter-spacing: -1px;
+}
+
+.services__columnbox__column__textbox-button {
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.5);
 }

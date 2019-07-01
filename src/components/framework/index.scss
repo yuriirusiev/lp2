@@ -68,6 +68,15 @@
     &--light {
         color: $txt-light-color;
     }
+
+    &--colored {
+        background:$txt-colored-bgr;
+        padding: 5px 20px;
+        border-radius: 15px;
+        letter-spacing: -1px;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
 .button {
@@ -85,12 +94,6 @@
         text-align: center;
         color: $btn-solid-text-color;
         background-color: $btn-solid-color;
-    }
-
-    &--outlined {
-        border: 1px solid #DDDDDD;
-        box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.5);
-        color: $txt-dark-color;
     }
 }
 
@@ -122,7 +125,7 @@
     margin: 0;
 }
 
-.menu__link {
+.menu__list-item__link {
     display: block;
     text-decoration: none;
     padding: 5px 7px;

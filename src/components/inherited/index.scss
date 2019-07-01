@@ -16,7 +16,6 @@ body{
 }
 
 .main-wrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -29,4 +28,8 @@ body{
 
 .footer {
     flex: 0 0 auto;
+}
+
+.about__first-two-blocks{
+    background: url(../../images/about-first-two-blocks-bg.png) right bottom no-repeat;
 }

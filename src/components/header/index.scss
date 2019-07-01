@@ -7,21 +7,21 @@
 
 .header__inner {
     display: flex;
-    padding: 40px 0 40px 0;
+    padding: 40px 0;
     width: 100%;
 }
 
-.header__left-content {
+.header__navigation {
     align-self: center;
 }
 
-.header__right-content {
+.header__phone {
     display: flex;
     margin-left: auto;
     align-items: center;
 }
 
-.header__phone-text {
+.header__phone-number {
     margin: 0 20px 0 0;
     font-size: 18px;
     letter-spacing: -1px;

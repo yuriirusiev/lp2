@@ -22,14 +22,15 @@
                     <section class="advantages__outer">
                         @@include("./components/advantages/index.html")                        
                     </section>
-                    <section class="about__outer">
-                        @@include("./components/services/index.html")                        
-                        @@include("./components/news/index.html")                        
-                        @@include("./components/professional/index.html")                        
+                    <section class="about-common__outer">
+                        <div class="about__first-two-blocks">
+                            @@include("./components/services/index.html")                        
+                            @@include("./components/news/index.html")
+                        </div>                        
+                        @@include("./components/about/index.html")                        
                     </section>
-                    <section class="contact__outer">
-                        @@include("./components/choose-plan/index.html")
-                        @@include("./components/contact/index.html")
+                    <section class="sales__outer">
+                        @@include("./components/sale-plan/index.html")
                     </section>
                 </main>
                 @@include("./components/footer/index.html")

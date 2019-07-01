@@ -1,35 +1,35 @@
 .first-screen__inner {
-    padding: 70px 0 140px 0;
+    padding: 70px 0 140px;
     display: flex;
     position: relative;
-    
-    @media (max-width: 1200px) {
-        background-color: rgba($color: #ffffff, $alpha: 0.3)
-        }
 }
 
-.first-screen__left-content {
+.first-screen__content {
     display: flex;
     align-items: center;
     padding: 0 25px 0 0;
     z-index: 10;
+
+    @media (max-width: 1200px) {
+        background-color: rgba(255,255,255, 0.5);
+        }
 }
 
-.first-screen__textbox-wrapper {
+.first-screen__content__textbox-wrapper {
     max-width: 540px;
     display: flex;
     align-items: center;
     padding: 130px 0 125px 60px;
 }
 
-.first-screen__right-content {
-    position: absolute;
-    right: 0;
-}
-
-.first-screen__text {
-    padding: 22px 0 28px 0;
+.first-screen__content__textbox-p {
+    padding: 22px 0 28px;
     line-height: 30px;
     letter-spacing: -1px;
     font-weight: 300;
+}
+
+.first-screen__imgbox {
+    position: absolute;
+    right: 0;
 }
