@@ -1,12 +1,11 @@
-@import "../variables.scss";
+@import "src/styles/variables.scss";
 
 .services__inner {
-    padding: 0 0 90px 0;
+    padding: 0 0 90px;
 }
 
 .services__textbox-main__text {
     line-height: 30px;
-    letter-spacing: -1px;
     padding: 30px 0;
 }
 
@@ -18,21 +17,26 @@
 .services__columnbox__column {
     max-width: 368px;
     border-radius: 4px;
-    border: 1px solid #E8E9ED;
+    border: 1px solid #e8e9ed;
     padding: 0 0 70px 0;
+
+    &:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
 
     &:hover 
         .button--outlined {
             text-align: center;
-            color:#ffffff;
+            color:#fff;
             background-color: $btn-solid-color;
             box-shadow: none;
             }
-
 }
 
 .services__columnbox__column__img {
     border-radius: 4px 4px 0 0;
+    height: 100%;
+    width: 100%;
 }
 
 .services__columnbox__column__textbox {
@@ -50,10 +54,9 @@
     line-height: 26px;
     font-weight: 300;
     padding: 0 0 22px 0;
-    letter-spacing: -1px;
 }
 
 .services__columnbox__column__textbox-button {
-    border: 1px solid #DDDDDD;
-    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.5);
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, .5);
 }

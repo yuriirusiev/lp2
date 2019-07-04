@@ -1,0 +1,64 @@
+@import "src/styles/variables.scss";
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:before, 
+    &:after {
+    display: table;
+    content: "";              
+    }
+
+    @media (max-width: $xxs-down) {
+        width: 100%;
+    }
+
+    @media (min-width: $xxs-up) {
+        width: 420px;
+    }
+
+    @media (min-width: $xs-up) {
+        width: 620px;
+    }
+
+    @media (min-width: $sm-up) {
+        width: 750px;
+    }
+
+    @media (min-width: $md-up) {
+        width: 970px;
+    }
+
+    @media (min-width: $lg-up) {
+        width: 1140px;
+    }
+
+    @media (min-width: $xl-up) {
+        width: 1399px;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid__box1 {
+    grid-row: 1/2;
+}
+
+.grid__box2 {
+    grid-row: 1/3;
+}
+
+.grid__box3 {
+    grid-row: 2/4;
+}
+
+.grid__box4 {
+    grid-row: 3/4;
+}
