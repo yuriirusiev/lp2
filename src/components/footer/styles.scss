@@ -1,17 +1,28 @@
+@import "src/styles/variables.scss";
+
 .footer__wrapper {
     background: rgba(250, 236, 140,.5);
     padding: 0 0 50px;
 }
 
-.footer-bottom-content {
+.footer__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $sm-up) {
+        flex-direction: column;
+    }
 }
 
 .footer__links-rights {
     display: flex;
     align-items: center;
+
+    @media (max-width: $sm-up) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer__links-rights__socials__list {
@@ -24,6 +35,10 @@
     width: 215px;
     justify-content: space-between;
     padding: 0 50px 0 0;
+
+    @media (max-width: $sm-up) {
+        padding: 20px 0;
+    }
 }
 
 .footer__links-rights__copyright {

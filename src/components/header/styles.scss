@@ -1,14 +1,25 @@
+@import "src/styles/variables.scss";
+
 .header__wrapper {
     margin: 0 auto;
     right: 0;
     left: 0;
     z-index: 1;
+
+    @media (max-width: $md-up) {
+        background: rgba(148, 214, 232, .5);
+    }
 }
 
 .header__inner {
     display: flex;
     padding: 40px 0;
     width: 100%;
+
+    @media (max-width: $sm-up) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .header__navigation {
@@ -19,9 +30,19 @@
     display: flex;
     margin-left: auto;
     align-items: center;
+
+    @media (max-width: $sm-up) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
 }
 
 .header__phone-number {
     margin: 0 20px 0 0;
     font-size: 18px;
+
+    @media (max-width: $sm-up) {
+        padding: 20px 0;
+    }
 }

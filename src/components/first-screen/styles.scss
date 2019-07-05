@@ -1,7 +1,21 @@
+@import "src/styles/variables.scss";
+
+.first-screen__wrapper {
+
+    @media (max-width: $md-up) {
+        background: rgba(148, 214, 232, .5);
+    }
+}
+
 .first-screen__inner {
-    padding: 70px 0 140px;
+    padding: 170px 0 170px;
     display: flex;
     position: relative;
+    align-items: center;
+
+    @media (max-width: $md-up) {
+        padding: 30px 0 80px;
+    }
 }
 
 .first-screen__content {
@@ -10,16 +24,20 @@
     padding: 0 25px 0 0;
     z-index: 10;
 
-    @media (max-width: 900px) {
-        background-color: rgba(255,255,255, .5);
-        }
+    @media (max-width: $md-up) {
+        margin: 0 auto;
+    }
 }
 
 .first-screen__content__textbox-wrapper {
     max-width: 540px;
     display: flex;
     align-items: center;
-    padding: 130px 0 125px 60px;
+    padding: 0 0 0 60px;
+
+    @media (max-width: $sm-up) {
+        padding: 0 0 0 10px;
+    }
 }
 
 .first-screen__content__textbox-p {
@@ -31,4 +49,8 @@
 .first-screen__imgbox {
     position: absolute;
     right: 0;
+
+    @media (max-width: $md-up) {
+        display: none;
+    }
 }

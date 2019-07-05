@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .contact__wrapper {
     background: url(images/contact-bg.png) center bottom no-repeat;
     width: 100%;
@@ -37,6 +39,10 @@
     min-height: 20px;
     background-color: #fff;
     padding: 10px 15px;
+
+    @media (max-width: $md-up) {
+        width: 230px;
+    }
 }
 
 .contact__form__input {
@@ -46,6 +52,10 @@
     width: 300px;
     vertical-align: middle;
     padding: 0 0 0 15px;
+
+    @media (max-width: $md-up) {
+        width: 160px;
+    }
 }
 
 .contact__button {

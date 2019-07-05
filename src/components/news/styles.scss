@@ -1,5 +1,12 @@
+@import "src/styles/variables.scss";
+
 .news__inner {
     padding: 0 0 180px;
+
+    @media (max-width: $sm-up) {
+        padding: 0 0 80px;
+        text-align: center;
+    }
 }
 
 .news__textbox-main {
@@ -20,6 +27,10 @@
 .news__content {
     display: flex;
     align-items: center;
+
+    @media (max-width: $sm-up) {
+        flex-direction: column;
+    }
 }
 
 .news__content__textbox {
@@ -36,4 +47,26 @@
     font-size: 14px;
     line-height: 36px;
     padding: 0 0 40px;
+}
+
+.news__content__imgbox {
+
+    @media (max-width: $sm-up) {
+        width: 300px;
+        height: auto;
+    }
+
+}
+
+.news__content__imgbox__img {
+
+    @media (max-width: $md-up) {
+        height: 50vh;
+    }
+
+    @media (max-width: $sm-up) {
+        width: 100%;
+        height: auto;
+        padding: 0 0 20px;
+    }
 }

@@ -1,6 +1,18 @@
+@import "src/styles/variables.scss";
+
 .advantages__inner {
     padding: 60px 0 80px 86px;
     max-width: 950px;
+    
+    @media (max-width: $md-up) {
+        padding: 40px 0;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 40px 0;
+        margin: 0 auto;
+    }
 }
 
 .advantages__main-textbox-heading {
@@ -18,7 +30,11 @@
 
     &:hover {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
-    }  
+    }
+
+    @media (max-width: $md-up) {
+        width: auto;
+    }
 }
 
 .advantages__grid-box1 {
