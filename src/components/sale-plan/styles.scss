@@ -32,12 +32,17 @@
 .sale-plan__columnbox__column {
     text-align: center;
     padding: 110px 45px 0;
+    margin: 40px 0 41px;
     background-size: cover;
     background-position: center;
     width: calc( 100% / 3 );
 
     @media (max-width: $sm-up) {
         width: 100%;
+    }
+
+    &:hover {
+        margin: 0;
     }
 }
 
