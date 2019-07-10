@@ -4,7 +4,7 @@
     position: absolute;
     width: 100%;
     height: 820px;
-    background: url(images/main-bg.png) right top no-repeat;
+    background: url(images/main-bg.png) no-repeat right top;
 
     @media (max-width: $md-up) {
         background: none;
@@ -28,5 +28,5 @@
 }
 
 .about__first-two-blocks{
-    background: url(images/about-first-two-blocks-bg.png) right bottom no-repeat;
+    background: url(images/about-first-two-blocks-bg.png) no-repeat right bottom;
 }

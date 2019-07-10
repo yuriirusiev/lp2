@@ -52,7 +52,7 @@
     &--solid {
         text-align: center;
         color: $btn-solid-text-color;
-        background-color: $btn-solid-color;
+        background: $btn-solid-color;
     }
 }
 
@@ -91,7 +91,7 @@
 
     &:hover {
         color: $btn-solid-text-color;
-        background-color: $btn-solid-color;
+        background: $btn-solid-color;
         border-radius: 13px;
         }
 }

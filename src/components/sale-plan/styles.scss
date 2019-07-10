@@ -32,8 +32,9 @@
 .sale-plan__columnbox__column {
     text-align: center;
     padding: 110px 45px 0;
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: calc( 100% / 3 );
 
     @media (max-width: $sm-up) {
@@ -95,7 +96,7 @@
     &:hover {
         text-align: center;
         color: $btn-solid-text-color;
-        background-color: $btn-solid-color;
+        background: $btn-solid-color;
         border: 1px solid $btn-solid-color;
     }
 
