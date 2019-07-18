@@ -1,5 +1,4 @@
 let slider = document.querySelector(".services__columnbox");
-let sliderWrapper = slider.querySelector(".services__columnbox__wrapper");
 let sliderItems = slider.querySelectorAll(".services__columnbox__column");
 let sliderControlLeft = slider.querySelector(".services__columnbox__slider-control--left");
 let sliderControlRight = slider.querySelector(".services__columnbox__slider-control--rigth");
@@ -8,8 +7,7 @@ let slideShiftValue = 2.5;
 let slideShift = `0 2.5% 0 ${+slideShiftValue.toFixed(1)}%`;
 
 let items = [];
-
-sliderItems.forEach ((item, index) => items.push( index));
+sliderItems.forEach ((item, index) => items.push(index));
 
 sliderControlRight.onclick = () => {
   if (window.innerWidth >= 769) {
