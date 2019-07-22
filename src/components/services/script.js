@@ -40,6 +40,14 @@ sliderControlLeft.onclick = () => {
   }
 }
 
+let resetMargin = () => {
+  if (window.innerWidth <= 768) {
+    sliderItems[0].style.margin = "";
+  }
+}
+
+window.addEventListener('resize', resetMargin);
+
 //Swipe
 
 let touchstartX = 0;
@@ -54,7 +62,7 @@ sliderWrapper.addEventListener('touchend', function(event) {
     handleGesture();
 }, false); 
 
-function handleGesture() {
+let handleGesture = () => {
   if (touchendX > touchstartX) { //swipe left
     if (slideStep === 0) {
       slideShiftValue -= (32.5*(items.length-3));

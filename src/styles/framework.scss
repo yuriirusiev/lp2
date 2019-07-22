@@ -3,10 +3,13 @@
 .heading {
     font-weight: 600;
     margin: 0;
-    color: $txt-dark-color;
 
     &--size--l {
         font-size: $heading-size-l;
+    }
+
+    &--dark {
+        color: $txt-dark-color;
     }
 
     &--light {

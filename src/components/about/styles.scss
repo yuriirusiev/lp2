@@ -5,17 +5,19 @@
     align-items: center;
     padding: 0 0 90px;
     
-    @media (max-width: $md-up) {
+    @media (max-width: $md-down) {
         flex-direction: column;
-        align-items: center;
     }
 }
 
 .about__textbox {
-    padding: 0 55px 0 0;
     max-width: 440px;
+
+    @media (min-width: $md-up) {
+        padding: 0 55px 0 0;
+    }
     
-    @media (max-width: $md-up) {
+    @media (max-width: $md-down) {
         padding: 25px 0;
         text-align: center;
     }
@@ -33,15 +35,13 @@
 }
 
 .about__images__grid {
-    
-    @media (max-width: $sm-up) {
+    @media (max-width: $sm-down) {
         grid-template-columns: 1fr;
     }
 }
 
 .about__images__grid-box {
-    
-    @media (max-width: $sm-up) {
+    @media (max-width: $sm-down) {
         width: 300px;
     }
 }

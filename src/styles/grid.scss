@@ -45,9 +45,12 @@
     display: grid;
     grid-gap: 20px;
     min-height: 320px;
-    grid-template-columns: repeat(2,1fr);
-    
-    @media (max-width: $sm-up) {
+
+    @media (min-width: $sm-up) {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (max-width: $sm-down) {
         grid-template-columns: 1fr;
         grid-auto-columns: 320px;
         justify-content: center;
@@ -56,31 +59,34 @@
 
 .grid__box-1 {
     grid-row: 1/2;
-
-    @media (max-width: $sm-up) {
-        grid-row: 1/2;
-    }
-
 }
 
 .grid__box-2 {
-    grid-row: 1/3;
+    @media (min-width: $sm-up) {
+        grid-row: 1/3;
+    }
 
-    @media (max-width: $sm-up) {
+    @media (max-width: $sm-down) {
         grid-row: 2/3;
     }
 }
 
 .grid__box-3 {
-    grid-row: 2/4;
-    @media (max-width: $sm-up) {
+    @media (min-width: $sm-up) {
+        grid-row: 2/4;
+    }
+
+    @media (max-width: $sm-down) {
         grid-row: 3/4;
     }
 }
 
 .grid__box-4 {
-    grid-row: 3/4;
-    @media (max-width: $sm-up) {
+    @media (min-width: $sm-up) {
+        grid-row: 3/4;
+    }
+
+    @media (max-width: $sm-down) {
         grid-row: 4/5;
     }
 }

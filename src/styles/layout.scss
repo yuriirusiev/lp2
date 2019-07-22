@@ -4,12 +4,14 @@
     position: absolute;
     width: 100%;
     height: 820px;
-    background: url(images/main-bg.png) no-repeat right top;
 
-    @media (max-width: $md-up) {
-        background: none;
+    @media (min-width: $md-up) {
+        background: url(images/main-bg.png) no-repeat right top;
     }
 
+    @media (max-width: $md-down) {
+        background: none;
+    }
 }
 
 .main-wrapper {
