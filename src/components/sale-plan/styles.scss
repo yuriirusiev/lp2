@@ -54,16 +54,20 @@
 .sale-plan__columnbox__column-1 {
     background-image: url(images/choose-plan-col-1.png);
 
-    &:hover .sale-plan__columnbox__column__button {
-        display: inline-block;
+    &:hover {
+        .sale-plan__columnbox__column__button {
+            display: inline-block;
+        }
     }
 }
 
 .sale-plan__columnbox__column-2 {
     background-image: url(images/choose-plan-col-2.png);
    
-    &:hover .sale-plan__columnbox__column__button {
-        display: inline-block;
+    &:hover {
+        .sale-plan__columnbox__column__button {
+            display: inline-block;
+        }
     }
 }
 

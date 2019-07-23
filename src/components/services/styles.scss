@@ -96,7 +96,7 @@
     
     &:first-child {
         @media (min-width: $sm-up) {
-            margin: 0 2.5% 0 2.5%;
+            margin: 0 2.5%;
         }
 
         @media (max-width: $sm-down) {
