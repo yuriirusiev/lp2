@@ -20,7 +20,7 @@ sliderControlRight.onclick = () => {
   } else {
       slideStep = 0;
       slideShiftValue = 2.5;
-      slideShift = `0 2.5% 0 2.5%`;
+      slideShift = `0 2.5%`;
       sliderItems[0].style.margin = slideShift;
   }
 }
@@ -88,7 +88,7 @@ let handleGesture = () => {
     } else {
         slideStep = 0;
         slideShiftValue = 2.5;
-        slideShift = `0 2.5% 0 2.5%`;
+        slideShift = `0 2.5%`;
         sliderItems[0].style.margin = slideShift;
     }
   }
