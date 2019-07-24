@@ -1,10 +1,14 @@
-let columnBox = document.querySelector(".sale-plan__columnbox");
-let columns = columnBox.querySelectorAll(".sale-plan__columnbox__column");
+let columns = document.querySelectorAll(".sale-plan__columnbox__column");
 
 let widthOnHoverElement = `40%`;
 let widthNeighborsOfHovered = `30%`;
 
 let changeWidthOnHover = (indexHovered, indexNeighbor1, indexNeighbor2) =>  {
+
+    columns[indexHovered].onmouseover = columns[indexHovered].onmouseout = () => {
+        columns.forEach(item => item.style.width = "");
+    };
+
     if (window.matchMedia("(min-width: 769px)").matches) {
 
         columns[indexHovered].onmouseover = () => {
@@ -12,20 +16,7 @@ let changeWidthOnHover = (indexHovered, indexNeighbor1, indexNeighbor2) =>  {
             columns[indexNeighbor1].style.width = widthNeighborsOfHovered;
             columns[indexNeighbor2].style.width = widthNeighborsOfHovered;
         };
-
-        columns[indexHovered].onmouseout = () => {
-            columns[indexHovered].style.width = "";
-            columns[indexNeighbor1].style.width = "";
-            columns[indexNeighbor2].style.width = "";
-        };
-
-    } else {
-        columns[indexHovered].onmouseover = () => {
-            columns[indexHovered].style.width = "";
-            columns[indexNeighbor1].style.width = "";
-            columns[indexNeighbor2].style.width = "";
-        };
-    }
+    } 
 };
 
 let initChangeWidthOnHover = () => {

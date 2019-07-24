@@ -7,11 +7,8 @@ let slideStep = 0;
 let slideShiftValue = 2.5;
 let slideShift = `0 2.5% 0 ${+slideShiftValue.toFixed(1)}%`;
 
-let items = [];
-sliderItems.forEach ((item, index) => items.push(index));
-
 sliderControlRight.onclick = () => {
-  if (slideStep < items.length-3) {
+  if (slideStep < sliderItems.length-3) {
     slideShiftValue -= 32.5;
     slideShift = `0 2.5% 0 ${+slideShiftValue.toFixed(1)}%`;
     slideStep++;
@@ -27,9 +24,9 @@ sliderControlRight.onclick = () => {
 
 sliderControlLeft.onclick = () => {
   if (slideStep === 0) {
-    slideShiftValue -= (32.5*(items.length-3));
+    slideShiftValue -= (32.5*(sliderItems.length-3));
     slideShift = `0 2.5% 0 ${+slideShiftValue.toFixed(1)}%`;
-    slideStep = (items.length-3);
+    slideStep = (sliderItems.length-3);
     sliderItems[0].style.margin = slideShift;
 
   } else if (slideStep > 0) {
@@ -65,9 +62,9 @@ sliderWrapper.addEventListener('touchend', function(event) {
 let handleGesture = () => {
   if (touchendX > touchstartX) { //swipe left
     if (slideStep === 0) {
-      slideShiftValue -= (32.5*(items.length-3));
+      slideShiftValue -= (32.5*(sliderItems.length-3));
       slideShift = `0 2.5% 0 ${+slideShiftValue.toFixed(1)}%`;
-      slideStep = (items.length-3);
+      slideStep = (sliderItems.length-3);
       sliderItems[0].style.margin = slideShift;
 
     } else if (slideStep > 0) {
@@ -79,7 +76,7 @@ let handleGesture = () => {
   }
     
   if (touchendX < touchstartX) { //swipe right
-    if (slideStep < items.length-3) {
+    if (slideStep < sliderItems.length-3) {
       slideShiftValue -= 32.5;
       slideShift = `0 2.5% 0 ${+slideShiftValue.toFixed(1)}%`;
       slideStep++;
