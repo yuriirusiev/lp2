@@ -1,16 +1,14 @@
-let columns = document.querySelectorAll(".sale-plan__columnbox__column");
+let columns = document.getElementsByClassName('.sale-plan__columnbox__column')
 
-let widthOnHoverElement = `40%`;
-let widthNeighborsOfHovered = `30%`;
+let widthOnHoverElement = '40%'
+let widthNeighborsOfHovered = '30%'
 
 let changeWidthOnHover = (indexHovered, indexNeighbor1, indexNeighbor2) =>  {
-
     columns[indexHovered].onmouseover = columns[indexHovered].onmouseout = () => {
-        columns.forEach(item => item.style.width = "");
+        columns.forEach(item => item.style.width = '');
     };
 
-    if (window.matchMedia("(min-width: 769px)").matches) {
-
+    if (window.matchMedia('(min-width: 769px)').matches) {
         columns[indexHovered].onmouseover = () => {
             columns[indexHovered].style.width = widthOnHoverElement;
             columns[indexNeighbor1].style.width = widthNeighborsOfHovered;
@@ -27,4 +25,4 @@ let initChangeWidthOnHover = () => {
 
 initChangeWidthOnHover();
 
-window.addEventListener("resize", initChangeWidthOnHover);
+window.addEventListener('resize', initChangeWidthOnHover);
