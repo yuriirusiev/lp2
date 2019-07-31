@@ -1,51 +1,15 @@
-@import "../variables.scss";
-
-.container {
-    width: 1140px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    &:before, 
-    &:after {
-    display: table;
-    content: "";              
-    }
-
-    @media (max-width: 449px){
-        width: 100%;
-    }
-
-    @media (min-width: 450px){
-        width: 420px;
-    }
-
-    @media (min-width: 650px){
-        width: 620px;
-    }
-
-    @media (min-width: 768px){
-        width: 750px;
-    }
-
-    @media (min-width: 992px){
-        width: 970px;
-    }
-
-    @media (min-width: 1200px){
-        width: 1140px;
-    }
-}
+@import "src/styles/variables.scss";
 
 .heading {
-    font-weight: bold;
-    letter-spacing: -1px;
+    font-weight: 600;
     margin: 0;
-    color: $txt-dark-color;
 
     &--size--l {
         font-size: $heading-size-l;
+    }
+
+    &--dark {
+        color: $txt-dark-color;
     }
 
     &--light {
@@ -73,7 +37,6 @@
         background:$txt-colored-bgr;
         padding: 5px 20px;
         border-radius: 15px;
-        letter-spacing: -1px;
         display: inline-block;
         margin: 0;
     }
@@ -84,16 +47,15 @@
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 10px;
-    letter-spacing: 1px;
     padding: 14px 55px;
     border-radius: 20px;
 
     &--solid {
         text-align: center;
         color: $btn-solid-text-color;
-        background-color: $btn-solid-color;
+        background: $btn-solid-color;
     }
 }
 
@@ -132,29 +94,7 @@
 
     &:hover {
         color: $btn-solid-text-color;
-        background-color: $btn-solid-color;
+        background: $btn-solid-color;
         border-radius: 13px;
         }
-}
-
-.grid {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.grid__box1 {
-    grid-row: 1/2;
-}
-
-.grid__box2 {
-    grid-row: 1/3;
-}
-
-.grid__box3 {
-    grid-row: 2/4;
-}
-
-.grid__box4 {
-    grid-row: 3/4;
 }

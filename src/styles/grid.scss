@@ -1,0 +1,92 @@
+@import "src/styles/variables.scss";
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:before, 
+    &:after {
+    display: table;
+    content: "";              
+    }
+
+    @media (max-width: $xxs-down) {
+        width: 100%;
+    }
+
+    @media (min-width: $xxs-up) {
+        width: 420px;
+    }
+
+    @media (min-width: $xs-up) {
+        width: 620px;
+    }
+
+    @media (min-width: $sm-up) {
+        width: 750px;
+    }
+
+    @media (min-width: $md-up) {
+        width: 970px;
+    }
+
+    @media (min-width: $lg-up) {
+        width: 1140px;
+    }
+
+    @media (min-width: $xl-up) {
+        width: 1399px;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    min-height: 320px;
+
+    @media (min-width: $sm-up) {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (max-width: $sm-down) {
+        grid-template-columns: 1fr;
+        grid-auto-columns: 320px;
+        justify-content: center;
+    }
+}
+
+.grid__box-1 {
+    grid-row: 1/2;
+}
+
+.grid__box-2 {
+    @media (min-width: $sm-up) {
+        grid-row: 1/3;
+    }
+
+    @media (max-width: $sm-down) {
+        grid-row: 2/3;
+    }
+}
+
+.grid__box-3 {
+    @media (min-width: $sm-up) {
+        grid-row: 2/4;
+    }
+
+    @media (max-width: $sm-down) {
+        grid-row: 3/4;
+    }
+}
+
+.grid__box-4 {
+    @media (min-width: $sm-up) {
+        grid-row: 3/4;
+    }
+
+    @media (max-width: $sm-down) {
+        grid-row: 4/5;
+    }
+}

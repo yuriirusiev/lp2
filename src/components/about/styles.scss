@@ -1,0 +1,52 @@
+@import "src/styles/variables.scss";
+
+.about__inner {
+    display: flex;
+    align-items: center;
+    padding: 0 0 90px;
+    
+    @media (max-width: $md-down) {
+        flex-direction: column;
+    }
+}
+
+.about__textbox {
+    max-width: 440px;
+
+    @media (min-width: $md-up) {
+        padding: 0 55px 0 0;
+    }
+    
+    @media (max-width: $md-down) {
+        padding: 25px 0;
+        text-align: center;
+    }
+}
+
+.about__textbox-heading {
+    padding: 40px 0 30px;
+    font-size: 36px;
+}
+
+.about__textbox-text {
+    padding: 0 0 30px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.about__images__grid {
+    @media (max-width: $sm-down) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about__images__grid-box {
+    @media (max-width: $sm-down) {
+        width: 300px;
+    }
+}
+
+.about__images__grid-box__img {
+    width: 100%;
+    height: auto;
+}

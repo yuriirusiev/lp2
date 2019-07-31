@@ -1,0 +1,47 @@
+@import "src/styles/variables.scss";
+
+.header__wrapper {
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    @media (max-width: $md-down) {
+        background: rgba(148, 214, 232, .5);
+    }
+}
+
+.header__inner {
+    display: flex;
+    padding: 40px 0;
+    width: 100%;
+
+    @media (max-width: $sm-down) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.header__navigation {
+    align-self: center;
+}
+
+.header__phone {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+
+    @media (max-width: $sm-down) {
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+.header__phone-number {
+    margin: 0 20px 0 0;
+    font-size: 18px;
+
+    @media (max-width: $sm-down) {
+        padding: 20px 0;
+    }
+}

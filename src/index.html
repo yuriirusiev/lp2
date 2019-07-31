@@ -7,7 +7,7 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <link rel="stylesheet" href="index.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="main-outer">
@@ -29,12 +29,15 @@
                         </div>                        
                         @@include("./components/about/index.html")                        
                     </section>
-                    <section class="sales__outer">
+                    <section class="sales-common__outer">
                         @@include("./components/sale-plan/index.html")
+                        @@include("./components/contact/index.html")
                     </section>
                 </main>
                 @@include("./components/footer/index.html")
             </div>
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>

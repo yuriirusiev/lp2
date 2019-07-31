@@ -4,9 +4,11 @@ var gulp = require("gulp"),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     sourcemaps = require("gulp-sourcemaps"),
+    uglify = require('gulp-uglify'),
     concat = require("gulp-concat"),
     imagemin = require("gulp-imagemin"),
     fileinclude = require('gulp-file-include'),
+    babel = require('gulp-babel'),
     browserSync = require("browser-sync").create();
 
 function style() {
@@ -40,6 +42,18 @@ function optimizeImg() {
         .pipe(gulp.dest("./public/images/"));
 }
 
+function uglifyJS () {
+    return gulp.src("./src/**/*.js")
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+          presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(concat("script.js"))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest("./public/"));
+}
+
 function reload(done) {
 browserSync.reload();
 done();
@@ -53,11 +67,12 @@ browserSync.init({
 });
 gulp.watch("./src/**/*.scss", style);
 gulp.watch("./src/**/*.html", htmlInclude);
+gulp.watch("./src/**/*.js", uglifyJS);
 gulp.watch("./src/images/**/*", optimizeImg);
 gulp.watch("./public/*.html", reload);
 }
 exports.watch = watch
 
-var build = gulp.parallel(watch, style, htmlInclude, optimizeImg);
+var build = gulp.parallel(watch, style, htmlInclude, uglifyJS, optimizeImg);
 
 gulp.task('default', build);

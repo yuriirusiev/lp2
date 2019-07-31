@@ -1,0 +1,117 @@
+@import "src/styles/variables.scss";
+
+.sale-plan__inner {
+    padding: 0 0 50px;
+}
+
+.sale-plan__textbox {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.sale-plan__textbox-heading {
+    font-size: 36px;
+}
+
+.sale-plan__textbox-p {
+    font-weight: 300;
+    line-height: 30px;
+    padding: 30px 0 40px;
+}
+
+.sale-plan__columnbox {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $sm-down) {
+        flex-direction: column;
+    }
+}
+
+.sale-plan__columnbox__column {
+    text-align: center;
+    padding: 110px 45px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $sm-up) {
+        margin: 40px 0 41px;
+        width: calc( 100% / 3 );
+    
+        &:hover {
+            margin: auto;
+            box-shadow: 0 2px 70px rgba(161, 161, 161, .5);
+        }
+    }
+
+    @media (max-width: $sm-down) {
+        width: 100%;
+    }
+}
+
+.sale-plan__columnbox__column-1 {
+    background-image: url(images/choose-plan-col-1.png);
+
+    &:hover {
+        .sale-plan__columnbox__column__button {
+            display: inline-block;
+        }
+    }
+}
+
+.sale-plan__columnbox__column-2 {
+    background-image: url(images/choose-plan-col-2.png);
+   
+    &:hover {
+        .sale-plan__columnbox__column__button {
+            display: inline-block;
+        }
+    }
+}
+
+.sale-plan__columnbox__column-3 {
+    background-image: url(images/choose-plan-col-3.png);
+
+    &:hover {
+        .sale-plan__columnbox__column__button {
+            display: inline-block;
+        }
+    }
+}
+
+.sale-plan__columnbox__column-heading {
+    font-weight: 600;
+    font-size: 26px;
+    padding: 20px 0 0;
+    min-height: 100px;
+}
+
+.sale-plan__columnbox__column-p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0 auto;
+    min-height: 185px;
+}
+
+.sale-plan__columnbox__column__button {
+    margin: 0 0 40px;
+    border: 1px solid #fff;
+
+    &:hover {
+        text-align: center;
+        color: $btn-solid-text-color;
+        background: $btn-solid-color;
+        border: 1px solid $btn-solid-color;
+    }
+
+    @media (min-width: $sm-up) {
+        display: none;
+    }
+
+    @media (max-width: $sm-down) {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,73 @@
+@import "src/styles/variables.scss";
+
+.contact__wrapper {
+    background: url(images/contact-bg.png) no-repeat center bottom;
+    width: 100%;
+    padding: 90px 0 60px;
+}
+
+.contact__main-textbox {
+    text-align: center;
+}
+
+.contact__main-textbox-heading {
+    font-size: 36px;
+    line-height: 54px;
+    padding: 0 0 50px;
+}
+
+.contact__main-textbox-p {
+    line-height: 34px;
+    padding: 0 0 50px;
+}
+
+.contact__form-menu_outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__form-outer {
+    padding: 0 0 50px;
+}
+
+.contact__form-inner {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    min-height: 20px;
+    background: #fff;
+    padding: 10px 15px;
+
+    @media (min-width: $md-up) {
+        width: 370px;
+    }
+
+    @media (max-width: $md-down) {
+        width: 230px;
+    }
+}
+
+.contact__form__input {
+    border: none;
+    outline: none;
+    padding: 0 0 0 15px;
+
+    @media (min-width: $md-up) {
+        width: 300px;
+    }
+
+    @media (max-width: $md-down) {
+        width: 160px;
+    }
+}
+
+.contact__button {
+    width: 40px;
+    height: 41px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: url(images/arrow-blue.png) 100% 100% no-repeat;
+    cursor: pointer;
+}
